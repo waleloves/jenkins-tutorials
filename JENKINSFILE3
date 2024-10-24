@@ -3,32 +3,32 @@ pipeline {
     stages {
         stage('pre -build') {
             steps {
-                bat 'echo Pre-build'
+                shell 'echo Pre-build'
             }
         }
         stage('build') {
             steps {
-                bat 'echo Build in progress.'
+                shell 'echo Build in progress.'
             }
         }
         stage('Unit tests') {
             steps {
-                bat 'echo Running unit tests'
+                shell 'echo Running unit tests'
             }
         }
         stage('deploy') {
             steps {
-                bat 'echo Deploying build'
+                shell 'echo Deploying build'
             }
         }
         stage('Regression tests') {
             steps {
-                bat 'echo Running E2E tests'
+                shell 'echo Running E2E tests'
             }
         }
         stage('Release to prod') {
             steps {
-                bat 'echo Releasing to prod'
+                shell 'echo Releasing to prod'
             }
         }
     }
